@@ -14,9 +14,9 @@
   <body class="ng-cloak" ng-controller="MainCtrl">
     <div id="main-container">
       <img id="qr-code" src="images/qrcode.png" />
-      <h1>Kent C. Dodds</h1>
+      <h1>{{contact.name}}</h1>
       <div>
-        <a ng-href="{{'mailto:' + contact.email}}" target="_blank">{{contact.email}}</a> | {{contact.phone}}
+        <a ng-href="{{contact.url}}">{{contact.website}}</a> | <a ng-href="{{'mailto:' + contact.email}}" target="_blank">{{contact.email}}</a> | {{contact.phone}}
       </div>
       <section id="education">
         <h2>Education</h2>

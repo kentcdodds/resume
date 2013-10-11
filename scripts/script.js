@@ -5,9 +5,11 @@
   app.value('resumeValues', (function() {
     return {
       contact: {
+        name: 'Kent C. Dodds',
         email: 'kent@doddsfamily.us',
         phone: '801-810-5373',
-        phoneUrl: '/#/contact?phone'
+        website: 'kent.doddsfamily.us',
+        url: 'http://kent.doddsfamily.us'
       },
       education: {
         degree: 'Master of Information Systems Management',
