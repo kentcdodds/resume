@@ -42,7 +42,7 @@
           company: 'United Services Automobile Association (USAA)',
           companyUrl: 'http://www.usaa.com',
           imgSrc: './images/USAA.png',
-          jobTitle: 'Software Engineer (IT Intern)',
+          jobTitle: 'Software Engineer',
           timeRange: 'May 2013 - August 2013',
           achievements: [
             'Built a wrapper page for a portion of all wicket based mobile app views',
