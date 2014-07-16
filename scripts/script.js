@@ -20,7 +20,7 @@
         collegeUrl: 'http://marriottschool.byu.edu',
         imgSrc: '../resume/images/byu.png',
         items: [
-          'J. Owen Cherrington Scholarship service to classmates and academic performance',
+          'J. Owen Cherrington Scholarship for service to classmates and academic performance',
           'Leadership: AIS Co-President and former BYU Men’s Chorus Vice President'
         ]
       },
@@ -78,7 +78,7 @@
             '<a href="https://github.com/Unitech/angular-bridge">angular-bridge</a> (NodeJS & AngularJS)',
             '<a href="https://github.com/expressjs">express org</a> member (NodeJS)',
             '<a href="https://github.com/firebase">Firebase org</a> member (JavaScript)',
-            'See <a href="https://github.com/kentcdodds">GitHub</a>...'
+            'see <a href="https://github.com/kentcdodds">GitHub</a>...'
           ].join(', ')
         },
         {
@@ -88,12 +88,12 @@
             '<a href="http://www.gdgut.com/io-extended/">Google I/O Extended Utah</a> Organizer',
             'Speaker at: <a href="https://plus.google.com/events/csi6shd32p2i1ctnlh7gkrtd768?authkey=CK2NzLL7vM7HAw">GDG Utah</a>',
             '<a href="http://www.meetup.com/AngularJS-Utah/events/173788512/">AngularJS Utah Meetup</a>',
-            'UtahJS <a href="http://conf.utahjs.com/schedule"Conference</a> & <a href="http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/">Meetup</a>'
+            'UtahJS <a href="http://conf.utahjs.com/schedule">Conference</a> & <a href="http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/">Meetup</a>'
           ].join(', ')
         },
         {
           title: 'Volunteer',
-          content: 'Two year church mission, Eagle Scout, and currently 11 year old scout leader'
+          content: 'Two year church mission and Eagle Scout'
         },
         {
           title: 'Hobbies',
@@ -103,7 +103,19 @@
     };
   })());
 
-  app.controller('MainCtrl', function($scope, resumeValues) {
+  app.controller('MainCtrl', function($scope, resumeValues, $sce) {
+    angular.forEach(resumeValues.skillsAndAchievements, function(item, index) {
+      resumeValues.skillsAndAchievements[index].content = $sce.trustAsHtml(item.content);
+    });
+    angular.forEach(resumeValues.experience, function(item, index) {
+      var achievements = resumeValues.experience[index].achievements;
+      angular.forEach(achievements, function(item, index) {
+        achievements[index] = $sce.trustAsHtml(item);
+      });
+    });
+    angular.forEach(resumeValues.education.items, function(item, index) {
+      resumeValues.education.items[index] = $sce.trustAsHtml(item);
+    });
     angular.extend($scope, resumeValues);
   });
 })();

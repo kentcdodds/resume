@@ -16,7 +16,7 @@
       <img id="qr-code" src="images/qrcode.png" />
       <h1>{{contact.name}}</h1>
       <div>
-        <a ng-href="{{contact.url}}">{{contact.website}}</a> | <a ng-href="{{'mailto:' + contact.email}}" target="_blank">{{contact.email}}</a> | {{contact.phone}}
+        <a ng-href="{{contact.url}}">{{contact.website}}</a> | <a ng-href="mailto:{{contact.email}}" target="_blank">{{contact.email}}</a> | <a ng-href="tel:{{contact.phone}}">{{contact.phone}}</a>
       </div>
       <section id="experience">
         <h2>Experience</h2>
@@ -24,7 +24,7 @@
           <h3>{{xp.jobTitle}}</h3><time>{{xp.timeRange}}</time>
           <a ng-href="{{xp.companyUrl}}">{{xp.company}}</a>
           <ul>
-            <li ng-repeat="achievement in xp.achievements" ng-bind-html-unsafe="achievement"></li>
+            <li ng-repeat="achievement in xp.achievements" ng-bind-html="achievement"></li>
           </ul>
         </div>
       </section>
@@ -32,7 +32,7 @@
         <h2>Skills & Achievements</h2>
         <ul>
           <li ng-repeat="item in skillsAndAchievements">
-            <h3>{{item.title}}: </h3><span ng-bind-html-unsafe="item.content"></span>
+            <h3>{{item.title}}: </h3><span ng-bind-html="item.content"></span>
           </li>
         </ul>
       </section>
@@ -41,12 +41,12 @@
         <h3>{{education.degree}}</h3><time>{{education.graduationDate}}</time>
         <a ng-href="{{education.schoolUrl}}">{{education.school}}</a> | <a ng-href="{{education.collegeUrl}}">{{education.college}}</a>
         <ul>
-          <li ng-repeat="item in education.items" ng-bind-html-unsafe="item"></li>
+          <li ng-repeat="item in education.items" ng-bind-html="item"></li>
         </ul>
       </section>
     </div>
     
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
 
     <script src="vendor/ga.js"></script>
 
