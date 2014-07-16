@@ -20,8 +20,7 @@
         collegeUrl: 'http://marriottschool.byu.edu',
         imgSrc: '../resume/images/byu.png',
         items: [
-          'Major GPA 3.76; Cumulative GPA 3.44',
-          'J. Owen Cherrington Scholarship for outstanding service to classmates and excellent academic performance in IT related courses',
+          'J. Owen Cherrington Scholarship service to classmates and academic performance',
           'Leadership: AIS Co-President and former BYU Men’s Chorus Vice President'
         ]
       },
@@ -31,11 +30,11 @@
           companyUrl: 'http://www.domo.com',
           imgSrc: './images/domo.png',
           jobTitle: 'Software Engineer',
-          timeRange: 'December 2012 - May 2013 & August 2013 - Present',
+          timeRange: 'December 2012 - Present',
           achievements: [
-            'Implemented new feature to improve end user experience for over 75% of users',
-            'Initiated conversations to lead to new features which will enhance the usability of the product and improve user experience',
-            'Automated the writing of endpoint tests to save developers time in the future and improved process by automating the creation of new endpoint proposals'
+            'Identified a bottleneck in our frontend build and implemented a fix to make it over 2.5x faster',
+            'Worked with a team to implement many key features to be used in a major future unveiling',
+            'Working to improve performance of the entire AngularJS application by preparing for update'
           ]
         },
         {
@@ -45,7 +44,7 @@
           jobTitle: 'Software Engineer',
           timeRange: 'May 2013 - August 2013',
           achievements: [
-            'Built a wrapper page for a portion of all wicket based mobile app views',
+            'Instructed of over 30 Web Engineers by giving an introductory presentation on AngularJS',
             'Utilized <a href="http://jmpressjs.github.io/jmpress.js">jmpress.js</a> to create and present results of internship experience to executives and received praise as “the best intern presentation ever” from the IT Intern director'
           ]
         },
@@ -65,19 +64,32 @@
       skillsAndAchievements: [
         {
           title: 'Primary Technologies',
-          content: 'JavaScript, HTML5, CSS3, AngularJS, NodeJS, jQuery, MongoDB, Git, Java'
+          content: 'JavaScript, HTML5, CSS3, AngularJS, NodeJS, jQuery, MongoDB, Git'
         },
         {
           title: 'Open Source Contributions',
-          content: 'Angular Bridge (NodeJS & AngularJS), Play Framework 2.0 (Java)'
+          content: [
+            '<a href="http://kent.doddsfamily.us/kcd-angular">kcd-angular</a>',
+            '<a href="http://nimbly.github.io/angular-formly">angular-formly</a>',
+            '<a href="http://angular-data.pseudobry.com/">angular-data</a>',
+            '<a href="http://kent.doddsfamily.us/watchOnce/">watchOnce</a> (AngularJS)',
+            '<a href="http://kent.doddsfamily.us/genie/">genie</a> (JavaScript and AngularJS)',
+            '<a href="http://issuetemplate.com/">issue-template</a> (GitHub Tool)',
+            '<a href="https://github.com/Unitech/angular-bridge">angular-bridge</a> (NodeJS & AngularJS)',
+            '<a href="https://github.com/expressjs">express org</a> member (NodeJS)',
+            '<a href="https://github.com/firebase">Firebase org</a> member (JavaScript)',
+            'See <a href="https://github.com/kentcdodds">GitHub</a>...'
+          ].join(', ')
         },
         {
-          title: 'Personal Projects',
-          content: 'JS-Point, SpendMyCents.com, HackItFast.com, kent.doddsfamily.us'
-        },
-        {
-          title: 'Other Skills',
-          content: 'Presentation, communication, documentation, search engine optimization'
+          title: 'Community Activity',
+          content: [
+            '<a href="http://www.gdgut.com/">Google Developer Group Utah</a> Organizer',
+            '<a href="http://www.gdgut.com/io-extended/">Google I/O Extended Utah</a> Organizer',
+            'Speaker at: <a href="https://plus.google.com/events/csi6shd32p2i1ctnlh7gkrtd768?authkey=CK2NzLL7vM7HAw">GDG Utah</a>',
+            '<a href="http://www.meetup.com/AngularJS-Utah/events/173788512/">AngularJS Utah Meetup</a>',
+            'UtahJS <a href="http://conf.utahjs.com/schedule"Conference</a> & <a href="http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/">Meetup</a>'
+          ].join(', ')
         },
         {
           title: 'Volunteer',
@@ -92,7 +104,6 @@
   })());
 
   app.controller('MainCtrl', function($scope, resumeValues) {
-    $scope.ie = (navigator.appName === 'Microsoft Internet Explorer');
     angular.extend($scope, resumeValues);
   });
 })();
