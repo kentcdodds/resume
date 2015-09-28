@@ -1,4 +1,10 @@
 'use strict';
+/*
+ If you're looking at this resume to judge my abilities, then please don't.
+ I take my craft seriously, but this is one thing that I didn't spend a crazy
+ amount of time on. If you're curious how I actually code, please see my
+ github profile :-) https://github.com/kentcdodds
+ */
 (function() {
   var app = angular.module('resume', ['ga']);
 
@@ -8,8 +14,8 @@
         name: 'Kent C. Dodds',
         email: 'kent@doddsfamily.us',
         phone: '801-810-5373',
-        website: 'kent.doddsfamily.us',
-        url: 'http://kent.doddsfamily.us'
+        website: 'kentcdodds.com',
+        url: 'http://kentcdodds.com'
       },
       education: {
         degree: 'Master of Information Systems Management',
@@ -18,7 +24,7 @@
         schoolUrl: 'http://www.byu.edu',
         college: 'Marriott School of Management',
         collegeUrl: 'http://marriottschool.byu.edu',
-        imgSrc: '../resume/images/byu.png',
+        gpa: '3.44',
         items: [
           'J. Owen Cherrington Scholarship for service to classmates and academic performance',
           'Leadership: AIS Co-President and former BYU Men’s Chorus Vice President'
@@ -26,21 +32,43 @@
       },
       experience: [
         {
-          company: 'Domo Technologies Inc.',
-          companyUrl: 'http://www.domo.com',
-          imgSrc: './images/domo.png',
+          company: 'Alianza Inc.',
+          companyUrl: 'http://www.alianza.com/',
           jobTitle: 'Software Engineer',
-          timeRange: 'December 2012 - Present',
+          timeRange: 'October 2014 - Present',
           achievements: [
-            'Identified a bottleneck in our frontend build and implemented a fix to make it over 2.5x faster',
-            'Worked with a team to implement many key features to be used in a major future unveiling',
-            'Working to improve performance of the entire AngularJS application by preparing for update'
+            'Re-architected frontend application using the latest frontend tools technologies (enabling lazy-loading, ES6, etc.)',
+            'Researched technologies and implemented unit testing builds and pull requests, code coverage and quality reporting and tracking, and continuous delivery',
+            'Implemented business critical features complete with unit tests',
+            'Created a open source presence for the company'
           ]
         },
         {
+          company: 'AtTask Inc.',
+          companyUrl: 'http://www.workfront.com/',
+          jobTitle: 'Software Engineer',
+          timeRange: 'August 2014 - October 2014',
+          achievements: [
+            'Created proposal (which is being implemented) to re-architect and standardize the monolithic frontend application into smaller pieces',
+            'Significantly improved performance of a long list of documents by implementing virtual scrolling and pagination'
+          ]
+        },
+        {
+          company: 'Domo Technologies Inc.',
+          companyUrl: 'http://www.domo.com',
+          jobTitle: 'Software Engineer',
+          timeRange: 'December 2012 - August 2014',
+          achievements: [
+            'Identified a bottleneck in our frontend build and implemented a fix to make it over 2.5x faster',
+            'Worked with a team to implement many key features to be used in a major future unveiling',
+            'Worked to improve performance of the entire AngularJS application by preparing for Angular update'
+          ]
+        }
+      ],
+      extraExperience: [
+        {
           company: 'United Services Automobile Association (USAA)',
           companyUrl: 'http://www.usaa.com',
-          imgSrc: './images/USAA.png',
           jobTitle: 'Software Engineer',
           timeRange: 'May 2013 - August 2013',
           achievements: [
@@ -51,7 +79,6 @@
         {
           company: 'The Church of Jesus Christ of Latter-Day Saints',
           companyUrl: 'http://www.mormon.org',
-          imgSrc: './images/lds.png',
           jobTitle: 'Business Intelligence Database Engineer',
           timeRange: 'April 2012 - December 2012',
           achievements: [
@@ -64,31 +91,30 @@
       skillsAndAchievements: [
         {
           title: 'Primary Technologies',
-          content: 'JavaScript, HTML5, CSS3, AngularJS, NodeJS, jQuery, MongoDB, Git'
+          content: 'JavaScript, HTML5, CSS3, AngularJS, ReactJS, Webpack, NodeJS, git'
         },
         {
           title: 'Open Source Contributions',
           content: [
-            '<a href="http://kent.doddsfamily.us/kcd-angular">kcd-angular</a>',
-            '<a href="http://nimbly.github.io/angular-formly">angular-formly</a>',
-            '<a href="http://angular-data.pseudobry.com/">angular-data</a>',
-            '<a href="http://kent.doddsfamily.us/watchOnce/">watchOnce</a> (AngularJS)',
-            '<a href="http://kent.doddsfamily.us/genie/">genie</a> (JavaScript and AngularJS)',
-            '<a href="http://issuetemplate.com/">issue-template</a> (GitHub Tool)',
-            '<a href="https://github.com/Unitech/angular-bridge">angular-bridge</a> (NodeJS & AngularJS)',
-            '<a href="https://github.com/expressjs">express org</a> member (NodeJS)',
-            '<a href="https://github.com/firebase">Firebase org</a> member (JavaScript)',
-            'see <a href="https://github.com/kentcdodds">GitHub</a>...'
+            '<a href="http://github.com/formly-js/angular-formly">angular-formly</a>',
+            '<a href="http://github.com/kentcdodds/api-check">api-check</a>',
+            '<a href="http://github.com/kentcdodds/ng-stats">ng-stats</a> (AngularJS)',
+            '<a href="http://github.com/kentcdodds/genie">genie</a> (JavaScript)',
+            '<a href="https://www.npmjs.com/~kentcdodds">various JS libraries</a>',
+            '<a href="http://issuetemplate.com/">issue-template</a> (GitHub Tool)'
           ].join(', ')
         },
         {
           title: 'Community Activity',
           content: [
-            '<a href="http://www.gdgut.com/">Google Developer Group Utah</a> Organizer',
-            '<a href="http://www.gdgut.com/io-extended/">Google I/O Extended Utah</a> Organizer',
-            'Speaker at: <a href="https://plus.google.com/events/csi6shd32p2i1ctnlh7gkrtd768?authkey=CK2NzLL7vM7HAw">GDG Utah</a>',
-            '<a href="http://www.meetup.com/AngularJS-Utah/events/173788512/">AngularJS Utah Meetup</a>',
-            'UtahJS <a href="http://conf.utahjs.com/schedule">Conference</a> & <a href="http://www.meetup.com/UtahJS-Orem-Meetup/events/156148202/">Meetup</a>'
+            '<a href="https://github.com/kentcdodds/talks#meetup-talks">Meet-up speaker</a>',
+            '<a href="https://github.com/kentcdodds/talks#conference-talks">conference speaker</a>',
+            '<a href="https://github.com/kentcdodds/talks#workshops">workshop giver</a>',
+            '<a href="https://egghead.io/instructors/kentcdodds">Egghead.io instructor</a>',
+            '<a href="http://angular-air.com">Angular Air</a> host',
+            '<a href="https://github.com/kentcdodds">coder</a>',
+            '<a href="https://medium.com/@kentcdodds">blogger</a>',
+            '<a href="https://twitter.com/kentcdodds">tweeter</a>'
           ].join(', ')
         },
         {
@@ -97,7 +123,7 @@
         },
         {
           title: 'Hobbies',
-          content: 'Family, faith, friends, making music, ASL, mud running, swimming, biking'
+          content: 'Family, faith, friends, making music, ASL, aggressive roller blading, snowboarding'
         }
       ]
     };
@@ -107,15 +133,18 @@
     angular.forEach(resumeValues.skillsAndAchievements, function(item, index) {
       resumeValues.skillsAndAchievements[index].content = $sce.trustAsHtml(item.content);
     });
-    angular.forEach(resumeValues.experience, function(item, index) {
-      var achievements = resumeValues.experience[index].achievements;
-      angular.forEach(achievements, function(item, index) {
-        achievements[index] = $sce.trustAsHtml(item);
-      });
-    });
+    angular.forEach(resumeValues.experience, fixupExperience);
+    angular.forEach(resumeValues.extraExperience, fixupExperience);
     angular.forEach(resumeValues.education.items, function(item, index) {
       resumeValues.education.items[index] = $sce.trustAsHtml(item);
     });
     angular.extend($scope, resumeValues);
+
+    function fixupExperience(item) {
+      var achievements = item.achievements;
+      angular.forEach(achievements, function(item, index) {
+        achievements[index] = $sce.trustAsHtml(item);
+      });
+    }
   });
 })();
