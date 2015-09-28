@@ -113,8 +113,7 @@
             '<a href="https://egghead.io/instructors/kentcdodds">Egghead.io instructor</a>',
             '<a href="http://angular-air.com">Angular Air</a> host',
             '<a href="https://github.com/kentcdodds">coder</a>',
-            '<a href="https://medium.com/@kentcdodds">blogger</a>',
-            '<a href="https://twitter.com/kentcdodds">tweeter</a>'
+            '<a href="https://medium.com/@kentcdodds">thought</a>-<a href="https://twitter.com/kentcdodds">haver</a>'
           ].join(', ')
         },
         {
