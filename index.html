@@ -10,10 +10,15 @@
 
     <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <link href="styles/styles.css" rel="stylesheet">
+    <!--
+      If you're looking at this resume to judge my abilities, then please don't.
+      I take my craft seriously, but this is one thing that I didn't spend a crazy
+      amount of time on. If you're curious how I actually code, please see my
+      github profile :-) https://github.com/kentcdodds
+    -->
   </head>
   <body class="ng-cloak" ng-controller="MainCtrl">
     <div id="main-container">
-      <img id="qr-code" src="images/qrcode.png" />
       <h1>{{contact.name}}</h1>
       <div>
         <a ng-href="{{contact.url}}">{{contact.website}}</a> | <a ng-href="mailto:{{contact.email}}" target="_blank">{{contact.email}}</a> | <a ng-href="tel:{{contact.phone}}">{{contact.phone}}</a>
@@ -21,11 +26,26 @@
       <section id="experience">
         <h2>Experience</h2>
         <div ng-repeat="xp in experience">
-          <h3>{{xp.jobTitle}}</h3><time>{{xp.timeRange}}</time>
+          <time>{{xp.timeRange}}</time>
           <a ng-href="{{xp.companyUrl}}">{{xp.company}}</a>
           <ul>
             <li ng-repeat="achievement in xp.achievements" ng-bind-html="achievement"></li>
           </ul>
+        </div>
+      </section>
+      <section>
+        <a href="#" ng-click="showExtras=!showExtras" class="show-more">
+          <span ng-if="!showExtras">Show More ↓</span>
+          <span ng-if="showExtras">Show Less ↑</span>
+        </a>
+        <div ng-show="showExtras">
+          <div ng-repeat="xp in extraExperience">
+            <time>{{xp.timeRange}}</time>
+            <a ng-href="{{xp.companyUrl}}">{{xp.company}}</a>
+            <ul>
+              <li ng-repeat="achievement in xp.achievements" ng-bind-html="achievement"></li>
+            </ul>
+          </div>
         </div>
       </section>
       <section id="skills-and-achievements">
@@ -38,18 +58,15 @@
       </section>
       <section id="education">
         <h2>Education</h2>
-        <h3>{{education.degree}}</h3><time>{{education.graduationDate}}</time>
+        <h3>{{education.degree}} | {{education.gpa}}</h3><time>{{education.graduationDate}}</time>
         <a ng-href="{{education.schoolUrl}}">{{education.school}}</a> | <a ng-href="{{education.collegeUrl}}">{{education.college}}</a>
         <ul>
           <li ng-repeat="item in education.items" ng-bind-html="item"></li>
         </ul>
       </section>
     </div>
-    <div style="text-align:center;margin-top:50px">
-      <small><a href="http://kent.doddsfamily.us/resume.pdf">Printable Version</a></small>
-    </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 
     <script src="vendor/ga.js"></script>
 
