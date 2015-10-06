@@ -96,10 +96,11 @@
         {
           title: 'Open Source Contributions',
           content: [
-            '<a href="http://github.com/formly-js/angular-formly">angular-formly</a>',
-            '<a href="http://github.com/kentcdodds/api-check">api-check</a>',
-            '<a href="http://github.com/kentcdodds/ng-stats">ng-stats</a> (AngularJS)',
-            '<a href="http://github.com/kentcdodds/genie">genie</a> (JavaScript)',
+            '<a href="https://github.com/angular/angular.js">AngularJS</a>',
+            '<a href="https://github.com/formly-js/angular-formly">angular-formly</a>',
+            '<a href="https://github.com/kentcdodds/api-check">api-check</a>',
+            '<a href="https://github.com/kentcdodds/ng-stats">ng-stats</a> (AngularJS)',
+            '<a href="https://github.com/kentcdodds/genie">genie</a> (JavaScript)',
             '<a href="https://www.npmjs.com/~kentcdodds">various JS libraries</a>',
             '<a href="http://issuetemplate.com/">issue-template</a> (GitHub Tool)'
           ].join(', ')
